@@ -1,0 +1,40 @@
+.card {
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 0.4rem;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header div img {
+  max-width: 30px;
+}
+
+.header div {
+  background: var(--shadow);
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.name {
+  font-size: 1rem;
+  color: gray;
+  font-weight: 500;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price {
+  font-size: 1.3rem;
+  font-weight: 600;
+}

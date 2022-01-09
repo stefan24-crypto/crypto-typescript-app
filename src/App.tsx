@@ -1,26 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { Route, Routes } from "react-router";
+import Layout from "./components/Layout/Layout";
+import BlockchainPage from "./Pages/BlockchainPage";
+import DAPPsPage from "./Pages/DAPPsPage";
+import HomePage from "./Pages/HomePage";
+import NFTPage from "./Pages/NFTPage";
+import AllPage from "./Pages/AllPage";
+import Web3Page from "./Pages/Web3Page";
+import { fetchHomeData, fetchTopCoins } from "./store/DataActions";
+import { useAppDispatch, useAppSelector } from "./store/hooks";
 
-function App() {
+const App: React.FC = () => {
+  const dispatch = useAppDispatch();
+  const homeData = useAppSelector((state) => state.data.currencyForHome);
+  const topCoins = useAppSelector((state) => state.data.topCoins);
+  useEffect(() => {
+    dispatch(fetchHomeData());
+    dispatch(fetchTopCoins());
+  }, []);
+
+  console.log(homeData);
+  console.log(topCoins);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/all/" element={<AllPage />} />
+        <Route path="/nft/" element={<NFTPage />} />
+        <Route path="/web3/" element={<Web3Page />} />
+        <Route path="/blockchain/" element={<BlockchainPage />} />
+        <Route path="/DAAPs/" element={<DAPPsPage />} />
+      </Routes>
+    </Layout>
   );
-}
+};
 
 export default App;
+
+//Make fully responsive
+// Have a section that sticks and allows to play the bitcoin svg animation!
