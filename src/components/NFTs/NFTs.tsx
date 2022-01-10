@@ -30,7 +30,7 @@ const NFTs: React.FC = () => {
       </header>
       <main className={classes.section}>
         <div className={classes.content}>
-          <h2>What are NFT's so valuable?</h2>
+          <h2>Why are NFT's so valuable?</h2>
           <p>
             Although you may think any digital image is immediately copyable
             with a quick “right-click, save as”,NFTs are based on cryptographic
@@ -48,13 +48,14 @@ const NFTs: React.FC = () => {
           <img src={nft2} alt="nft" />
         </div>
         <div className={classes.content}>
-          <h2>What are NFT's so valuable?</h2>
+          <h2>Why are NFTs so important?</h2>
           <p>
-            Although you may think any digital image is immediately copyable
-            with a quick “right-click, save as”,NFTs are based on cryptographic
-            technology that does not allow duplication to happen. They are like
-            collectors' items such as baseball or pokemon cards are collectables
-            in the physical world.
+            They are an evolution over the simple concept of cryptocurrencies.
+            Modern finance systems consist of sophisticated trending and loan
+            systems for different asset types, ranging from real estate to
+            lending contracts to artwork. By enabling digital representations of
+            physical assets, NFTs are a step forward in the reinvention of this
+            infrastructure.
           </p>
         </div>
       </footer>

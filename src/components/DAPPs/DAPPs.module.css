@@ -54,17 +54,44 @@
   top: 100px;
   right: 10px;
 }
-/* 
-@media (max-width: 1200px) {
-  .header {
-    flex-direction: column;
-    background: rosybrown;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 0 auto;
+  gap: 4rem;
+}
+
+.main div {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.main div h2 {
+  text-align: center;
+}
+
+.main div p {
+  text-align: justify;
+}
+
+.phone {
+  position: relative;
+  animation-name: bounce;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
   }
-  .left {
-    background: red;
+  50% {
+    transform: translateY(-10px);
   }
-  .right {
-    background: blue;
-    height: 40vh;
+  100% {
+    transform: translateY(0);
   }
-} */
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import DrawSvg from "./DrawSvg";
 import classes from "./HomeSection.module.css";
 import phone from "../../assets/phone.png";
@@ -10,8 +10,14 @@ import ETH from "../../assets/ethereum.png";
 import USDT from "../../assets/tether.png";
 import SOL from "../../assets/solana.png";
 import ADA from "../../assets/cardano.png";
+import decentralized from "../../assets/decentralized.png";
+import inflation from "../../assets/inflamable.png";
+import secure from "../../assets/secure-shield.png";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const HomeSection: React.FC = () => {
+  Aos.init({ duration: 1000 });
   const homeData = useAppSelector((state) => state.data.currencyForHome);
   const icons = [
     { icon: BTC, name: "BTC" },
@@ -62,7 +68,58 @@ const HomeSection: React.FC = () => {
           ))}
         </ul>
         <DrawSvg />
-        <div className={classes.other}></div>
+        <div className={classes.advantages}>
+          <div
+            className={classes.card}
+            data-aos-init="aos-initclassname"
+            data-aos="fade-up"
+          >
+            <div>
+              <img src={decentralized} alt="icon" />
+              <h2>Decentralized</h2>
+            </div>
+            <p>
+              A major pro of cryptocurrencies is that they are mainly
+              decentralized. Many cryptocurrencies are controlled by the
+              developers using it and those who have a significant amount of the
+              coin or by a corporation to develop it before it’s released into
+              the market. The decentralization helps keep the currency monopoly
+              free and in restraint, so nobody organization can determine the
+              flow and so the worth of the coin, which, in turn, will keep it
+              stable and secure, unlike fiat currencies which are controlled by
+              the Government.
+            </p>
+          </div>
+          <div className={classes.card} data-aos="fade-up" data-aos-delay="200">
+            <div>
+              <img src={inflation} alt="icon" />
+              <h2>Protection from Inflation</h2>
+            </div>
+            <p>
+              Inflation has caused many currencies to urge their value to
+              decline with time. At the time of its launch, almost every
+              cryptocurrency is released with a tough and fast amount. There are
+              only 21 million Bitcoins released within the planet. So, because
+              the demand increases, its value will increase which might maintain
+              with the market and, within the long run, prevent inflation.
+            </p>
+          </div>
+          <div className={classes.card} data-aos="fade-up" data-aos-delay="400">
+            <div>
+              <img src={secure} alt="icon" />
+              <h2>Secure</h2>
+            </div>
+            <p>
+              Privacy and security have always been concerns for
+              cryptocurrencies. The blockchain ledger relies on different
+              mathematical puzzles, which are hard to decode. It makes
+              cryptocurrency safer than ordinary electronic transactions.
+              Cryptocurrencies are for better security and privacy, and they use
+              pseudonyms that are unconnected to any user account or stored data
+              that might be linked to a profile.
+            </p>
+          </div>
+        </div>
       </main>
     </section>
   );

@@ -25,6 +25,18 @@
   text-align: start;
 }
 
+@media (max-width: 1300px) {
+  .content h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .content h1 {
+    font-size: 1.6rem;
+  }
+}
+
 .img {
   width: 45%;
   display: flex;
@@ -84,6 +96,30 @@
   font-weight: 600;
 }
 
-.other {
-  height: 200vh;
+.advantages {
+  position: relative;
+  padding: 2rem;
+  margin-top: 20vh;
+  display: flex;
+  gap: 2rem;
+}
+
+.card div img {
+  max-width: 40px;
+}
+
+.card {
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }

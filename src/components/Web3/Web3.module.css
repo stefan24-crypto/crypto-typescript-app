@@ -1,7 +1,3 @@
-.section {
-  height: 100vh;
-}
-
 .header {
   display: flex;
   justify-content: center;
@@ -9,8 +5,12 @@
 }
 
 .content {
-  width: 40%;
+  width: 50%;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .img {
@@ -23,4 +23,16 @@
 .img img {
   /* max-width: 1000px; */
   width: 100%;
+}
+
+.main {
+  display: flex;
+  padding: 2rem;
+  gap: 4rem;
+}
+
+.main div {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }

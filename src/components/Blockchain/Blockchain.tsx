@@ -4,6 +4,7 @@ import btc from "../../assets/bitcoin.png";
 import mining from "../../assets/mining.png";
 import node from "../../assets/nodes.png";
 import cryptography from "../../assets/cryptography.png";
+import blockchain from "../../assets/blockchain-header.png";
 
 const Blockchain: React.FC = () => {
   return (
@@ -11,10 +12,7 @@ const Blockchain: React.FC = () => {
       <header className={classes.header}>
         <h1>Blockchain</h1>
         <div className={classes.img}>
-          <img
-            src="https://digits.io/images/header-image-blue.png"
-            alt="header"
-          />
+          <img src={blockchain} alt="header" />
         </div>
         <div className={classes.text}>
           <p>

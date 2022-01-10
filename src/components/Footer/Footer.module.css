@@ -1,0 +1,48 @@
+.footer {
+  background: linear-gradient(to bottom left, var(--green), var(--bluish));
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 15vh;
+}
+
+.logo img {
+  max-width: 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.logo h1 span {
+  font-family: "Roboto";
+  font-weight: 600;
+  color: var(--green);
+}
+
+.sources p {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.sources li {
+  display: flex;
+  gap: 0.5rem;
+  list-style: circle;
+}
+.sources li a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.sources li a:hover {
+  text-decoration: underline;
+}

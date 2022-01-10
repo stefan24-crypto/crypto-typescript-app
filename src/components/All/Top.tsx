@@ -8,7 +8,7 @@ const Top: React.FC = () => {
   return (
     <section className={classes.top}>
       <header className={classes.header}>
-        <h1>CrytoCurrencies</h1>
+        <h1>Cryptocurrencies</h1>
       </header>
       <main className={classes.main}>
         {all.map((each) => (
