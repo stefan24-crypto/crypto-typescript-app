@@ -5,8 +5,11 @@ import mining from "../../assets/mining.png";
 import node from "../../assets/nodes.png";
 import cryptography from "../../assets/cryptography.png";
 import blockchain from "../../assets/blockchain-header.png";
+import Aos from "aos";
 
 const Blockchain: React.FC = () => {
+  Aos.init({ duration: 1000 });
+  Aos.refresh();
   return (
     <section className={classes.section}>
       <header className={classes.header}>
@@ -35,8 +38,12 @@ const Blockchain: React.FC = () => {
         <div className={classes.heading}>
           <h2>How does It Work?</h2>
         </div>
-        <div className={classes.grid}>
-          <div className={classes.card}>
+        <div className={classes.grid} data-aos="fade-up">
+          <div
+            className={classes.card}
+            data-aos="fade-up"
+            data-aos-init="aos-initclassname"
+          >
             <header className={classes.top}>
               <div>
                 <img src={btc} alt="icon" />

@@ -15,18 +15,61 @@ html {
   --green: #15d260;
   --shadow: rgba(21, 210, 97, 0.282);
   --bluish: #0e0d17;
+  --darker-white: rgba(255, 255, 255, 0.849);
+}
+
+body {
+  background: radial-gradient(
+    circle at 100%,
+    var(--black),
+    var(--bluish) 50%,
+    var(--green) 50%,
+    var(--bluish) 75%
+  );
+  color: var(--darker-white);
 }
 
 h1 {
   font-size: clamp(1rem, 10vw, 2.5rem);
+  color: white;
+}
+h2 {
+  color: white;
 }
 
 p {
   font-size: 1.1rem;
+  color: var(--darker-white);
 }
 
 @media (max-width: 800px) {
   p {
     font-size: 0.9rem;
   }
+}
+
+a {
+  color: var(--darker-white);
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+
+a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: var(--darker-white);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+a:hover:after {
+  left: 0;
+  width: 100%;
 }

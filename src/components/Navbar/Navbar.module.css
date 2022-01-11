@@ -11,7 +11,6 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: white;
 }
 
 .logo {
@@ -44,7 +43,7 @@
 .link {
   text-decoration: none;
   font-size: 1rem;
-  color: black;
+  color: white;
 }
 
 .burger {
@@ -72,7 +71,7 @@
     right: 0px;
     height: 90vh;
     top: 10vh;
-    background-color: white;
+    background-color: var(--bluish);
     width: 50%;
     transform: translateX(100%);
     transition: transform 0.2s ease-in;
@@ -90,5 +89,5 @@
   justify-content: center;
   align-items: center;
   opacity: 1;
-  transform: translateX(20px);
+  transform: translateX(30px);
 }

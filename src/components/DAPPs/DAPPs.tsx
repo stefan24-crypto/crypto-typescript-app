@@ -60,7 +60,7 @@ const DAPPs: React.FC = () => {
           </p>
         </div>
         <div>
-          <h2>What is Defi</h2>
+          <h2>What is DEFI?</h2>
           <p>
             Defi stands fro Decentralized Finance. In the past we have always
             used centralized finance which is means that there was a central

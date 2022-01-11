@@ -8,4 +8,5 @@
   outline: none;
   border-radius: 0.4rem;
   cursor: pointer;
+  transition: all 0.2s linear 0s;
 }

@@ -24,7 +24,7 @@
 
 .name {
   font-size: 1rem;
-  color: gray;
+  color: rgb(185, 185, 185);
   font-weight: 500;
 }
 
@@ -37,4 +37,5 @@
 .price {
   font-size: 1.3rem;
   font-weight: 600;
+  color: white;
 }

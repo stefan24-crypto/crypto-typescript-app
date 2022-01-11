@@ -4,8 +4,6 @@
   height: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 5rem;
-  color: black;
 }
 
 /* @media (max-width: 1300px) {
@@ -147,6 +145,13 @@
 
 .svg2 svg {
   height: 80%;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
 }
 
 @media (max-width: 650px) {

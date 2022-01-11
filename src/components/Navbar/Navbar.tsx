@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
           Blockchain
         </NavLink>
         <NavLink to="/DAAPs/" className={classes.link} onClick={hideNav}>
-          DAPPS
+          DAPPs
         </NavLink>
       </ul>
       <div className={classes.burger} onClick={toggleNav}>

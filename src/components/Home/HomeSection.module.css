@@ -105,6 +105,12 @@
   }
 }
 
+@media (max-width: 500px) {
+  .top_trending {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 .top_trending li {
   list-style: none;
   font-size: 1.2rem;
@@ -141,12 +147,22 @@
 }
 
 .timeline {
-  height: 80vh;
   padding: 2rem;
+}
+
+.heading {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
 }
 
 @media (max-width: 1200px) {
   .advantages {
     flex-direction: column;
   }
+}
+
+a {
+  text-decoration: none;
+  color: var(--green);
 }

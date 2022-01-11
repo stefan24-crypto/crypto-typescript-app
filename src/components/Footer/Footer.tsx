@@ -11,22 +11,10 @@ const Footer: React.FC = () => {
         <h1>
           <span>Crypto</span>Block
         </h1>
+        <div>
+          <a href="/contact/">Contact Me</a>
+        </div>
       </div>
-      {/* <div className={classes.sources}>
-        <p>Got info from:</p>
-        <li>
-          <span>Whiteboard Crypto on Youtube</span>
-          <a href="https://www.youtube.com/channel/UCsYYksPHiGqXHPoHI-fm5sg">
-            here
-          </a>
-        </li>
-        <li>
-          <span>Fireship on Youtube</span>
-          <a href="https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA">
-            here
-          </a>
-        </li>
-      </div> */}
     </footer>
   );
 };

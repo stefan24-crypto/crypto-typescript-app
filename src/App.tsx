@@ -8,7 +8,8 @@ import NFTPage from "./Pages/NFTPage";
 import AllPage from "./Pages/AllPage";
 import Web3Page from "./Pages/Web3Page";
 import { fetchHomeData, fetchTopCoins } from "./store/DataActions";
-import { useAppDispatch, useAppSelector } from "./store/hooks";
+import { useAppDispatch } from "./store/hooks";
+import ContactPage from "./Pages/ContactPage";
 
 const App: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -16,6 +17,8 @@ const App: React.FC = () => {
     dispatch(fetchHomeData());
     dispatch(fetchTopCoins());
   }, []);
+
+  //open link in a new window!
 
   return (
     <Layout>
@@ -26,6 +29,7 @@ const App: React.FC = () => {
         <Route path="/web3/" element={<Web3Page />} />
         <Route path="/blockchain/" element={<BlockchainPage />} />
         <Route path="/DAAPs/" element={<DAPPsPage />} />
+        <Route path="/contact/" element={<ContactPage />} />
       </Routes>
     </Layout>
   );
