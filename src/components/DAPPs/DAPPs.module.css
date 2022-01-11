@@ -81,7 +81,7 @@
   position: relative;
   animation-name: bounce;
   animation-timing-function: ease-in-out;
-  animation-duration: 2s;
+  animation-duration: 1.8s;
   animation-iteration-count: infinite;
 }
 @keyframes bounce {
@@ -89,9 +89,73 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-15px);
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 650px) {
+  .header {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .right {
+    display: flex;
+    gap: 1rem;
+  }
+  .left {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .right img {
+    object-fit: contain;
+  }
+
+  .right img:nth-child(1) {
+    top: 0;
+    left: 0;
+  }
+
+  .right img:nth-child(2) {
+    top: 0;
+    right: 0;
+  }
+
+  .right img:nth-child(3) {
+    top: 0;
+    right: 0;
+  }
+
+  .right img:nth-child(4) {
+    top: 0;
+    right: 0;
+  }
+
+  .left img:nth-child(1) {
+    top: 0;
+    left: 0;
+  }
+
+  .left img:nth-child(2) {
+    top: 0;
+    left: 0;
+  }
+
+  .left img:nth-child(3) {
+    top: 0;
+    left: 0;
+  }
+
+  .left img:nth-child(4) {
+    top: 0;
+    right: 0;
+  }
+
+  .main {
+    width: 100%;
   }
 }

@@ -36,11 +36,59 @@
 }
 
 .links {
+  position: relative;
   display: flex;
   gap: 2rem;
 }
+
 .link {
   text-decoration: none;
   font-size: 1rem;
   color: black;
+}
+
+.burger {
+  display: flex;
+  align-items: center;
+}
+
+.burger img {
+  max-width: 40px;
+}
+
+.burger {
+  display: none;
+}
+
+/* Mobile */
+@media screen and (max-width: 650px) {
+  /* body {
+    overflow-x: hidden;
+  } */
+
+  .links {
+    display: none;
+    position: absolute;
+    right: 0px;
+    height: 90vh;
+    top: 10vh;
+    background-color: white;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.navActive {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transform: translateX(20px);
 }

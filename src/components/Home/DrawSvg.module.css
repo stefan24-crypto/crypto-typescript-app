@@ -148,3 +148,28 @@
 .svg2 svg {
   height: 80%;
 }
+
+@media (max-width: 650px) {
+  .svg {
+    opacity: 0;
+  }
+  .section {
+    flex-direction: column;
+  }
+  .svg1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .svg2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .svg3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}

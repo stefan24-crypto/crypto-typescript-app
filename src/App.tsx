@@ -12,15 +12,10 @@ import { useAppDispatch, useAppSelector } from "./store/hooks";
 
 const App: React.FC = () => {
   const dispatch = useAppDispatch();
-  const homeData = useAppSelector((state) => state.data.currencyForHome);
-  const topCoins = useAppSelector((state) => state.data.topCoins);
   useEffect(() => {
     dispatch(fetchHomeData());
     dispatch(fetchTopCoins());
   }, []);
-
-  console.log(homeData);
-  console.log(topCoins);
 
   return (
     <Layout>
@@ -37,6 +32,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-
-//Make fully responsive
-// Have a section that sticks and allows to play the bitcoin svg animation!

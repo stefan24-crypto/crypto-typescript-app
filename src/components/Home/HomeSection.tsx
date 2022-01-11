@@ -14,6 +14,17 @@ import decentralized from "../../assets/decentralized.png";
 import inflation from "../../assets/inflamable.png";
 import secure from "../../assets/secure-shield.png";
 import Aos from "aos";
+import Timeline from "@mui/lab/Timeline";
+import TimelineItem from "@mui/lab/TimelineItem";
+import TimelineSeparator from "@mui/lab/TimelineSeparator";
+import TimelineConnector from "@mui/lab/TimelineConnector";
+import TimelineContent from "@mui/lab/TimelineContent";
+import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
+import TimelineDot from "@mui/lab/TimelineDot";
+import FastfoodIcon from "@mui/icons-material/Fastfood";
+import LaptopMacIcon from "@mui/icons-material/LaptopMac";
+import HotelIcon from "@mui/icons-material/Hotel";
+import RepeatIcon from "@mui/icons-material/Repeat";
 import "aos/dist/aos.css";
 
 const HomeSection: React.FC = () => {
@@ -119,6 +130,71 @@ const HomeSection: React.FC = () => {
               that might be linked to a profile.
             </p>
           </div>
+        </div>
+        <div className={classes.timeline}>
+          <Timeline position="alternate">
+            <TimelineItem>
+              <TimelineOppositeContent
+                sx={{ m: "auto 0" }}
+                align="right"
+                variant="body2"
+                color="text.secondary"
+              >
+                1990 - 2000
+              </TimelineOppositeContent>
+              <TimelineSeparator>
+                <TimelineConnector sx={{ bgcolor: "#15d260" }} />
+                <TimelineDot>
+                  <FastfoodIcon />
+                </TimelineDot>
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent sx={{ py: "12px", px: 2 }}>
+                <h2>Web 1.0</h2>
+                <p>Because you need strength</p>
+              </TimelineContent>
+            </TimelineItem>
+            <TimelineItem>
+              <TimelineOppositeContent
+                sx={{ m: "auto 0" }}
+                variant="body2"
+                color="text.secondary"
+              >
+                2000 - now
+              </TimelineOppositeContent>
+              <TimelineSeparator>
+                <TimelineConnector sx={{ bgcolor: "#15d260" }} />
+                <TimelineDot color="primary">
+                  <LaptopMacIcon />
+                </TimelineDot>
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent sx={{ py: "12px", px: 2 }}>
+                <h2>Web 2.0</h2>
+                <p>Because it&apos;s awesome!</p>
+              </TimelineContent>
+            </TimelineItem>
+            <TimelineItem>
+              <TimelineOppositeContent
+                sx={{ m: "auto 0" }}
+                variant="body2"
+                color="text.secondary"
+              >
+                now - whenever
+              </TimelineOppositeContent>
+              <TimelineSeparator>
+                <TimelineConnector />
+                <TimelineDot color="primary" variant="outlined">
+                  <HotelIcon />
+                </TimelineDot>
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent sx={{ py: "12px", px: 2 }}>
+                <h2>Web 3.0</h2>
+                <p>Because you need rest</p>
+              </TimelineContent>
+            </TimelineItem>
+          </Timeline>
         </div>
       </main>
     </section>

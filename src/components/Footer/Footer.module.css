@@ -1,5 +1,4 @@
 .footer {
-  background: linear-gradient(to bottom left, var(--green), var(--bluish));
   padding: 1.5rem;
   display: flex;
   justify-content: center;

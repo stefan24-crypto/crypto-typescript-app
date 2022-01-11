@@ -1,5 +1,7 @@
 import React from "react";
 import classes from "./Web3.module.css";
+import authentication from "../../assets/authentication.png";
+import backend from "../../assets/backend.png";
 
 const Web3 = () => {
   return (
@@ -25,10 +27,14 @@ const Web3 = () => {
         </div>
       </header>
       <main className={classes.main}>
-        <div>
-          <h2>How would User Authenticaion work?</h2>
+        <div className={classes.card}>
+          <div className={classes.heading}>
+            <h2>How would User Authentication work?</h2>
+            <div className={classes.icon}>
+              <img src={authentication} alt="icon" />
+            </div>
+          </div>
           <p>
-            {" "}
             Unlike web 2.0, the end user owns all their data. There is no need
             for you as the developer to collect an email and password. The end
             user has a public wallet address that can receive payments and a
@@ -39,8 +45,13 @@ const Web3 = () => {
             like buy an NFT.
           </p>
         </div>
-        <div>
-          <h2>How would the backend work?</h2>
+        <div className={classes.card}>
+          <div className={classes.heading}>
+            <h2>How would the backend work?</h2>
+            <div className={classes.icon}>
+              <img src={backend} alt="icon" />
+            </div>
+          </div>
           <p>
             Instead of a server and database, you will be writing smart
             contracts. The programming language used to write these smart

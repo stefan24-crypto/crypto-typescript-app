@@ -3,20 +3,27 @@ import classes from "./NFTs.module.css";
 import ape from "../../assets/nft.png";
 import kitties from "../../assets/cryptokitties.png";
 import nft2 from "../../assets/nft2.png";
+import nft from "../../assets/nfticon.png";
+import assets from "../../assets/assets.png";
+import diamond from "../../assets/diamond.png";
 
 const NFTs: React.FC = () => {
   return (
     <section className={classes.nfts}>
       <div className={classes.top}>
         <h1>NFTs</h1>
-        <p></p>
       </div>
       <header className={classes.section}>
         <div>
           <img src={ape} alt="nft" />
         </div>
-        <div className={classes.content}>
-          <h2>What is an NFT?</h2>
+        <div className={`${classes.content} ${classes.right}`}>
+          <div className={classes.heading}>
+            <h2>What is an NFT?</h2>
+            <div className={classes.icon}>
+              <img src={nft} alt="icon" />
+            </div>
+          </div>
           <p>
             <strong> NFT’s (Nun-Fungible tokens)</strong> are unique
             cryptographic tokens that exist on the blockchain and cannot be
@@ -29,8 +36,13 @@ const NFTs: React.FC = () => {
         </div>
       </header>
       <main className={classes.section}>
-        <div className={classes.content}>
-          <h2>Why are NFT's so valuable?</h2>
+        <div className={`${classes.content} ${classes.left}`}>
+          <div className={classes.heading}>
+            <h2>Why are NFT's so valuable?</h2>
+            <div className={classes.icon}>
+              <img src={diamond} alt="icon" />
+            </div>
+          </div>
           <p>
             Although you may think any digital image is immediately copyable
             with a quick “right-click, save as”,NFTs are based on cryptographic
@@ -47,8 +59,13 @@ const NFTs: React.FC = () => {
         <div className={classes.img}>
           <img src={nft2} alt="nft" />
         </div>
-        <div className={classes.content}>
-          <h2>Why are NFTs so important?</h2>
+        <div className={`${classes.content} ${classes.right}`}>
+          <div className={classes.heading}>
+            <h2>Why are NFTs so important?</h2>
+            <div className={classes.icon}>
+              <img src={assets} alt="assets" />
+            </div>
+          </div>
           <p>
             They are an evolution over the simple concept of cryptocurrencies.
             Modern finance systems consist of sophisticated trending and loan
@@ -60,7 +77,10 @@ const NFTs: React.FC = () => {
         </div>
       </footer>
       <div className={classes.question}>
-        <h2>Are NFT's all Hype and Are They Worth Investing In?</h2>
+        <div>
+          <h2>Are NFT's all Hype and Are They Worth Investing In?</h2>
+          <div></div>
+        </div>
         <p>
           Are NFTs a good investment? People create, collect and trade NFTs for
           millions of dollars, some with the hopes to profit in the future. But
