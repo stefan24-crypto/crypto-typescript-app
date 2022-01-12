@@ -11,8 +11,8 @@ const Footer: React.FC = () => {
         <h1>
           <span>Crypto</span>Block
         </h1>
-        <div>
-          <a href="/contact/">Contact Me</a>
+        <div className={classes.link}>
+          <Link to="/contact">Contact Me</Link>
         </div>
       </div>
     </footer>

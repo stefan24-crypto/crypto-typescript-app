@@ -1,16 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useEffect, Suspense } from "react";
 import { Route, Routes } from "react-router";
 import Layout from "./components/Layout/Layout";
-import BlockchainPage from "./Pages/BlockchainPage";
-import DAPPsPage from "./Pages/DAPPsPage";
-import HomePage from "./Pages/HomePage";
-import NFTPage from "./Pages/NFTPage";
-import AllPage from "./Pages/AllPage";
-import Web3Page from "./Pages/Web3Page";
 import { fetchHomeData, fetchTopCoins } from "./store/DataActions";
 import { useAppDispatch } from "./store/hooks";
-import ContactPage from "./Pages/ContactPage";
-import PageNotFound from "./Pages/PageNotFound";
+import { CircularProgress } from "@mui/material";
+
+//Lazy Loading
+const BlockchainPage = React.lazy(() => import("./Pages/BlockchainPage"));
+const DAPPsPage = React.lazy(() => import("./Pages/DAPPsPage"));
+const HomePage = React.lazy(() => import("./Pages/HomePage"));
+const NFTPage = React.lazy(() => import("./Pages/NFTPage"));
+const AllPage = React.lazy(() => import("./Pages/AllPage"));
+const Web3Page = React.lazy(() => import("./Pages/Web3Page"));
+const ContactPage = React.lazy(() => import("./Pages/ContactPage"));
+const PageNotFound = React.lazy(() => import("./Pages/PageNotFound"));
 
 const App: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -19,20 +22,26 @@ const App: React.FC = () => {
     dispatch(fetchTopCoins());
   }, []);
 
-  //open link in a new window!
-
   return (
     <Layout>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/all/" element={<AllPage />} />
-        <Route path="/nft/" element={<NFTPage />} />
-        <Route path="/web3/" element={<Web3Page />} />
-        <Route path="/blockchain/" element={<BlockchainPage />} />
-        <Route path="/DAAPs/" element={<DAPPsPage />} />
-        <Route path="/contact/" element={<ContactPage />} />
-        <Route path="*" element={<PageNotFound />}></Route>
-      </Routes>
+      <Suspense
+        fallback={
+          <div className="centered">
+            <CircularProgress />
+          </div>
+        }
+      >
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/all/" element={<AllPage />} />
+          <Route path="/nft/" element={<NFTPage />} />
+          <Route path="/web3/" element={<Web3Page />} />
+          <Route path="/blockchain/" element={<BlockchainPage />} />
+          <Route path="/DAAPs/" element={<DAPPsPage />} />
+          <Route path="/contact/" element={<ContactPage />} />
+          <Route path="*" element={<PageNotFound />}></Route>
+        </Routes>
+      </Suspense>
     </Layout>
   );
 };

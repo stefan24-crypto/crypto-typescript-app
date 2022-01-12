@@ -73,3 +73,30 @@ a:hover:after {
   left: 0;
   width: 100%;
 }
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: var(--bluish);
+  /* background: transparent; */
+}
+
+::-webkit-scrollbar {
+  width: 18px;
+  /* background: transparent; */
+  background-color: var(--bluish);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: var(--green);
+}
+
+.centered {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

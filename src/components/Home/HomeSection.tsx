@@ -16,6 +16,7 @@ import secure from "../../assets/secure-shield.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import FAQ from "./FAQ";
+import { TimelineMax } from "gsap";
 
 const HomeSection: React.FC = () => {
   Aos.init({ duration: 1000 });
@@ -28,7 +29,9 @@ const HomeSection: React.FC = () => {
     { icon: ADA, name: "ADA" },
   ];
 
-  //Add paralax effect to first section!
+  useEffect(() => {
+    const tl = new TimelineMax();
+  }, []);
 
   return (
     <section className={classes.home}>

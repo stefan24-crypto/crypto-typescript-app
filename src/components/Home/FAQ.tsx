@@ -25,7 +25,9 @@ const FAQ = () => {
         </Canvas>
       </div>
       <div className={classes.right}>
-        <Accordion sx={{ background: "transparent", padding: "0.8rem" }}>
+        <Accordion
+          sx={{ background: "transparent", padding: "0.8rem", width: "100%" }}
+        >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
             aria-controls="panel1a-content"
@@ -42,7 +44,9 @@ const FAQ = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion sx={{ background: "transparent", padding: "0.8rem" }}>
+        <Accordion
+          sx={{ background: "transparent", padding: "0.8rem", width: "100%" }}
+        >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
             aria-controls="panel2a-content"
@@ -59,7 +63,9 @@ const FAQ = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion sx={{ background: "transparent", padding: "0.8rem" }}>
+        <Accordion
+          sx={{ background: "transparent", padding: "0.8rem", width: "100%" }}
+        >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
             aria-controls="panel3a-content"
@@ -76,6 +82,47 @@ const FAQ = () => {
               to automate the execution of an agreement so that all participants
               can be immediately certain of the outcome, without any
               intermediary's involvement or time loss.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion
+          sx={{ background: "transparent", padding: "0.8rem", width: "100%" }}
+        >
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
+            aria-controls="panel3a-content"
+            id="panel3a-header"
+          >
+            <Typography sx={{ color: "white" }}>What is Mining?</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              Mining is process in which new currencies are entered into
+              circulation. It is also a way that new transactions are confirmed
+              by the network. Mining is performed using sophisticated hardware
+              that solves an extremely complex math problem. The first computer
+              to find the solution to the problem is awarded the next block and
+              the process begins again.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>{" "}
+        <Accordion
+          sx={{ background: "transparent", padding: "0.8rem", width: "100%" }}
+        >
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
+            aria-controls="panel3a-content"
+            id="panel3a-header"
+          >
+            <Typography sx={{ color: "white" }}>What is a block?</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              The transactions made during a given period are recorded into a
+              file called a block, which is the basis of the blockchain network.
+              A block simply stored information. There are many pieces of
+              information included within a block, but it doesn't occupy a large
+              amount of storage space.{" "}
             </Typography>
           </AccordionDetails>
         </Accordion>

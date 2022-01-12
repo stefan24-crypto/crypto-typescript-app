@@ -15,7 +15,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ name, price, change, id, bg, icon }) => {
   Chart.register(...registerables);
-  const [crypoHistory, setCryptoHistory] = useState([]);
+  const [cryptoHistory, setCryptoHistory] = useState([]);
   const fetchHistory = async () => {
     const response = await fetch(
       `https://coinranking1.p.rapidapi.com/coin/${id}/history/1y`,
@@ -38,10 +38,10 @@ const Card: React.FC<CardProps> = ({ name, price, change, id, bg, icon }) => {
   useEffect(() => {
     fetchHistory();
   }, []);
-  const labels = crypoHistory?.map((each: any) =>
+  const labels = cryptoHistory?.map((each: any) =>
     new Date(each?.timestamp).toDateString()
   );
-  const allPrices = crypoHistory?.map((each: any) => Number(each.price));
+  const allPrices = cryptoHistory?.map((each: any) => Number(each.price));
 
   return (
     <div className={classes.card}>

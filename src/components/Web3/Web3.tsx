@@ -17,7 +17,7 @@ const Web3 = () => {
             exchange money and information without the need for an unnecessary
             middleman such as a bank or tech corporation. Rather than just using
             free tech platforms like facebook in exchange for our data, users
-            can participate in the governance and operation of the protocpls
+            can participate in the governance and operation of the principles
             themselves. Essentially, this means that your data is under your
             control!
           </p>
@@ -73,7 +73,7 @@ const Web3 = () => {
         <h2>Evolution of The Web</h2>
       </div>
       <div className={classes.evolution}>
-        <div className={classes.div}>
+        <div className={classes.div} data-aos="fade-up">
           <h2>1.0</h2>
           <span>1990 - 2000</span>
           <p>
@@ -82,26 +82,23 @@ const Web3 = () => {
             huge majority of users who are consumers of content.
           </p>
         </div>
-        <div className={classes.div}>
+        <div className={classes.div} data-aos="fade-up" data-aos-delay="200">
           <h2>2.0</h2>
           <span>2000 - now</span>
           <p>
             Web 2.0 refers to worldwide websites which highlight user-generated
             content, usability, and interoperability for end users. Web 2.0 is
-            also called the participative social web. It does not refer to a
-            modification to any technical specification, but to modify the way
-            Web pages are designed and used
+            also called the participative social web.
           </p>
         </div>
-        <div className={classes.div}>
+        <div className={classes.div} data-aos="fade-up" data-aos-delay="400">
           <h2>3.0</h2>
           <span>now - whenever</span>
           <p>
             It refers to the evolution of web utilization and interaction which
             includes altering the Web into a database. It enables the
             up-gradation of the back-end of the web, after a long time of focus
-            on the front-end (Web 2.0 has mainly been about AJAX, tagging, and
-            another front-end user-experience innovation).
+            on the front-end.
           </p>
         </div>
       </div>

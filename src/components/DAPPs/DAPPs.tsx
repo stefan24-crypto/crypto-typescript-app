@@ -14,15 +14,6 @@ const DAPPs: React.FC = () => {
   const leftDiv = useRef<HTMLDivElement>(null);
   const rightDiv = useRef<HTMLDivElement>(null);
 
-  // const getRandomPosition = () => {
-  //   const rightDivProperties = rightDiv.current?.getBoundingClientRect();
-  //   const leftDivProperties = leftDiv.current?.getBoundingClientRect();
-  //   console.log(rightDivProperties);
-  // };
-
-  // getRandomPosition();
-  //add keyframes with an infinite animation to phone
-
   return (
     <section>
       <div className={classes.heading}>
@@ -44,33 +35,35 @@ const DAPPs: React.FC = () => {
         </div>
       </header>
       <main className={classes.main}>
-        <div>
-          <h2>How do DAPPs work?</h2>
-          <p>
-            For example Ethereum Blockchain: Ethereum is like a giant network of
-            computers where all the participants agree on the same state of the
-            data throughout the network. Ether is the crypto currency on the
-            ethereum network which is used to create transactions that change
-            the state of the data. When you broadcast a transaction you also
-            offer up a small amount of ether which provides incentive for
-            another computer in the network to execute the transaction. A
-            decentralized app also needs a front-end which works just like
-            before. However user authentication works in a completely different
-            way.
-          </p>
-        </div>
-        <div>
-          <h2>What is DEFI?</h2>
-          <p>
-            Defi stands fro Decentralized Finance. In the past we have always
-            used centralized finance which is means that there was a central
-            authority to control the flow of money for example the government
-            and banks. In the world of decentralized finance, instead of banks
-            there are pieces of code that run and act as a bank. They code is
-            open to everyone and they are also much cheaper than centralized
-            finance. Defi is built on three main principles. Cryptography, the
-            blockchain and smart contracts.
-          </p>
+        <div className={classes.two}>
+          <div className={classes.dapps}>
+            <h2>How do DAPPs work?</h2>
+            <p>
+              For example Ethereum Blockchain: Ethereum is like a giant network
+              of computers where all the participants agree on the same state of
+              the data throughout the network. Ether is the crypto currency on
+              the ethereum network which is used to create transactions that
+              change the state of the data. When you broadcast a transaction you
+              also offer up a small amount of ether which provides incentive for
+              another computer in the network to execute the transaction. A
+              decentralized app also needs a front-end which works just like
+              before. However user authentication works in a completely
+              different way.
+            </p>
+          </div>
+          <div className={classes.defi}>
+            <h2>What is DEFI?</h2>
+            <p>
+              Defi stands fro Decentralized Finance. In the past we have always
+              used centralized finance which is means that there was a central
+              authority to control the flow of money for example the government
+              and banks. In the world of decentralized finance, instead of banks
+              there are pieces of code that run and act as a bank. They code is
+              open to everyone and they are also much cheaper than centralized
+              finance. Defi is built on three main principles. Cryptography, the
+              blockchain and smart contracts.
+            </p>
+          </div>
         </div>
       </main>
     </section>

@@ -6,8 +6,10 @@ import nft2 from "../../assets/nft2.png";
 import nft from "../../assets/nfticon.png";
 import assets from "../../assets/assets.png";
 import diamond from "../../assets/diamond.png";
+import Aos from "aos";
 
 const NFTs: React.FC = () => {
+  Aos.init({ duration: 1000 });
   return (
     <section className={classes.nfts}>
       <div className={classes.top}>
@@ -36,7 +38,10 @@ const NFTs: React.FC = () => {
         </div>
       </header>
       <main className={classes.section}>
-        <div className={`${classes.content} ${classes.left}`}>
+        <div
+          className={`${classes.content} ${classes.left}`}
+          data-aos="fade-right"
+        >
           <div className={classes.heading}>
             <h2>Why are NFT's so valuable?</h2>
             <div className={classes.icon}>
@@ -59,7 +64,10 @@ const NFTs: React.FC = () => {
         <div className={classes.img}>
           <img src={nft2} alt="nft" />
         </div>
-        <div className={`${classes.content} ${classes.right}`}>
+        <div
+          className={`${classes.content} ${classes.right}`}
+          data-aos="fade-left"
+        >
           <div className={classes.heading}>
             <h2>Why are NFTs so important?</h2>
             <div className={classes.icon}>

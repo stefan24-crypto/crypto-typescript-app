@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
           Home
         </NavLink>
         <NavLink to="/all/" className={classes.link} onClick={hideNav}>
-          All
+          Prices
         </NavLink>
         <NavLink to="/nft/" className={classes.link} onClick={hideNav}>
           NFT's

@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useRef } from "react";
 import classes from "./ContactForm.module.css";
 import Button from "../UI/Button";
 import emailjs from "emailjs-com";
 import { useNavigate } from "react-router";
 import SendIcon from "@mui/icons-material/Send";
+import validator from "validator";
 
 const ContactForm: React.FC = () => {
+  const emailRef = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
   const sendEmail = (e: any) => {
     e.preventDefault();
+
+    const email = emailRef.current!.value;
+    if (!validator.isEmail(email)) {
+      return alert("Please enter a valid email :)");
+    }
+
     emailjs
       .sendForm(
         "service_ezo9sii",
@@ -44,6 +52,7 @@ const ContactForm: React.FC = () => {
               name="email"
               type="text"
               required
+              ref={emailRef}
             ></input>
           </div>
           <div className={classes.input}>

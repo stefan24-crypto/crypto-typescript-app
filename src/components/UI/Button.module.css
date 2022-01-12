@@ -11,5 +11,10 @@
   outline: none;
   border-radius: 0.4rem;
   cursor: pointer;
-  transition: all 0.2s linear 0s;
+  transition: 200ms ease-in-out;
+}
+
+.btn:hover {
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
 }
