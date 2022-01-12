@@ -15,6 +15,7 @@ import inflation from "../../assets/inflamable.png";
 import secure from "../../assets/secure-shield.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import FAQ from "./FAQ";
 
 const HomeSection: React.FC = () => {
   Aos.init({ duration: 1000 });
@@ -122,6 +123,7 @@ const HomeSection: React.FC = () => {
             </p>
           </div>
         </div>
+        <FAQ />
       </main>
     </section>
   );

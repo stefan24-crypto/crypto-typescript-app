@@ -3,6 +3,7 @@ import classes from "./ContactForm.module.css";
 import Button from "../UI/Button";
 import emailjs from "emailjs-com";
 import { useNavigate } from "react-router";
+import SendIcon from "@mui/icons-material/Send";
 
 const ContactForm: React.FC = () => {
   const navigate = useNavigate();
@@ -35,13 +36,23 @@ const ContactForm: React.FC = () => {
       <main className={classes.main}>
         <form className={classes.form} onSubmit={sendEmail}>
           <div className={classes.input}>
-            <input placeholder="Name" name="name" type="text"></input>
+            <input placeholder="Name" name="name" type="text" required></input>
           </div>
           <div className={classes.input}>
-            <input placeholder="Email Address" name="email" type="text"></input>
+            <input
+              placeholder="Email Address"
+              name="email"
+              type="text"
+              required
+            ></input>
           </div>
           <div className={classes.input}>
-            <input placeholder="Subject" name="subject" type="text"></input>
+            <input
+              placeholder="Subject"
+              name="subject"
+              type="text"
+              required
+            ></input>
           </div>
           <div className={classes.input}>
             <textarea
@@ -49,10 +60,13 @@ const ContactForm: React.FC = () => {
               name="message"
               cols={30}
               rows={8}
+              required
             ></textarea>
           </div>
           <div className={classes.btns}>
-            <Button>Email</Button>
+            <Button>
+              Send <SendIcon />
+            </Button>
           </div>
         </form>
       </main>

@@ -1,7 +1,7 @@
 .header {
   display: flex;
   justify-content: center;
-  height: 80vh;
+  height: 85vh;
 }
 
 .content {
@@ -53,7 +53,40 @@
 .heading {
   display: flex;
   align-items: center;
-  gap: 1rem;
+}
+
+.evolution {
+  display: flex;
+  gap: 2rem;
+}
+
+.div {
+  width: 33.3%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.div span {
+  color: var(--darker-white);
+}
+
+.div h2 {
+  color: white;
+}
+
+.web3 {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.web3 img {
+  width: 80%;
+}
+.h2 {
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 650px) {
@@ -66,6 +99,10 @@
     height: 50%;
     width: 100%;
     text-align: center;
+  }
+
+  .evolution {
+    flex-direction: column;
   }
 
   .img {

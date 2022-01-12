@@ -10,6 +10,7 @@ import Web3Page from "./Pages/Web3Page";
 import { fetchHomeData, fetchTopCoins } from "./store/DataActions";
 import { useAppDispatch } from "./store/hooks";
 import ContactPage from "./Pages/ContactPage";
+import PageNotFound from "./Pages/PageNotFound";
 
 const App: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -30,6 +31,7 @@ const App: React.FC = () => {
         <Route path="/blockchain/" element={<BlockchainPage />} />
         <Route path="/DAAPs/" element={<DAPPsPage />} />
         <Route path="/contact/" element={<ContactPage />} />
+        <Route path="*" element={<PageNotFound />}></Route>
       </Routes>
     </Layout>
   );
