@@ -1,0 +1,10 @@
+.header h1 {
+  border-left: 2px solid var(--green);
+  padding: 1rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}

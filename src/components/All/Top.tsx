@@ -5,6 +5,7 @@ import classes from "./Top.module.css";
 
 const Top: React.FC = () => {
   const all = useAppSelector((state) => state.data.topCoins);
+
   return (
     <section className={classes.top}>
       <header className={classes.header}>

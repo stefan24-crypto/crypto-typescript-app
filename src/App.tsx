@@ -14,6 +14,9 @@ const AllPage = React.lazy(() => import("./Pages/AllPage"));
 const Web3Page = React.lazy(() => import("./Pages/Web3Page"));
 const ContactPage = React.lazy(() => import("./Pages/ContactPage"));
 const PageNotFound = React.lazy(() => import("./Pages/PageNotFound"));
+const CurrencyDetailPage = React.lazy(
+  () => import("./Pages/CurrencyDetailPage")
+);
 
 const App: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -39,6 +42,7 @@ const App: React.FC = () => {
           <Route path="/blockchain/" element={<BlockchainPage />} />
           <Route path="/DAAPs/" element={<DAPPsPage />} />
           <Route path="/contact/" element={<ContactPage />} />
+          <Route path="all/:currencyID" element={<CurrencyDetailPage />} />
           <Route path="*" element={<PageNotFound />}></Route>
         </Routes>
       </Suspense>
