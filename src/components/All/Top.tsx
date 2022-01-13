@@ -13,8 +13,8 @@ const Top: React.FC = () => {
       <main className={classes.main}>
         {all.map((each) => (
           <Card
-            key={each.id}
-            id={each.id}
+            key={each.uuid}
+            id={each.uuid}
             name={each.name}
             price={each.price}
             change={each.change}

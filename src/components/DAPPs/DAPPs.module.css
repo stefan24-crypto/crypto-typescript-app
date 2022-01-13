@@ -13,6 +13,22 @@
 .img {
   position: relative;
   max-width: 100px;
+  animation-name: grow;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1.8s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .right img:nth-child(1) {
@@ -119,7 +135,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  left: -50px;
+  left: -40px;
   top: 80px;
   z-index: -1;
 }

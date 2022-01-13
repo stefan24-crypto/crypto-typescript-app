@@ -1,8 +1,8 @@
 import React, { useEffect, Suspense } from "react";
 import { Route, Routes } from "react-router";
 import Layout from "./components/Layout/Layout";
-import { fetchHomeData, fetchTopCoins } from "./store/DataActions";
-import { useAppDispatch } from "./store/hooks";
+import { fetchTopCoins, fetchHomeData } from "./store/DataActions";
+import { useAppDispatch, useAppSelector } from "./store/hooks";
 import { CircularProgress } from "@mui/material";
 
 //Lazy Loading
@@ -17,9 +17,11 @@ const PageNotFound = React.lazy(() => import("./Pages/PageNotFound"));
 
 const App: React.FC = () => {
   const dispatch = useAppDispatch();
+  const coins = useAppSelector((state) => state.data.topCoins);
+  console.log(coins);
   useEffect(() => {
-    dispatch(fetchHomeData());
     dispatch(fetchTopCoins());
+    dispatch(fetchHomeData());
   }, []);
 
   return (

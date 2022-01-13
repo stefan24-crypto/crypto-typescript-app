@@ -18,13 +18,13 @@ const Card: React.FC<CardProps> = ({ name, price, change, id, bg, icon }) => {
   const [cryptoHistory, setCryptoHistory] = useState([]);
   const fetchHistory = async () => {
     const response = await fetch(
-      `https://coinranking1.p.rapidapi.com/coin/${id}/history/1y`,
+      `https://coinranking1.p.rapidapi.com/coin/${id}/history?timePeriod=1y`,
       {
         method: "GET",
         headers: {
           "x-rapidapi-host": "coinranking1.p.rapidapi.com",
           "x-rapidapi-key":
-            "4bcf5adffcmsh7785cfd15e01ff7p184939jsn77c6abb52786",
+            "8f249f6c9dmsh451eacaa092832dp181eaejsnc59a1fbc32cb",
         },
       }
     );

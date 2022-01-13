@@ -14,7 +14,7 @@ export const fetchHomeData = () => {
             headers: {
               "x-rapidapi-host": "coinranking1.p.rapidapi.com",
               "x-rapidapi-key":
-                "4bcf5adffcmsh7785cfd15e01ff7p184939jsn77c6abb52786",
+                "8f249f6c9dmsh451eacaa092832dp181eaejsnc59a1fbc32cb",
             },
           }
         );
@@ -47,7 +47,7 @@ export const fetchTopCoins = () => {
           headers: {
             "x-rapidapi-host": "coinranking1.p.rapidapi.com",
             "x-rapidapi-key":
-              "4bcf5adffcmsh7785cfd15e01ff7p184939jsn77c6abb52786",
+              "8f249f6c9dmsh451eacaa092832dp181eaejsnc59a1fbc32cb",
           },
         }
       );

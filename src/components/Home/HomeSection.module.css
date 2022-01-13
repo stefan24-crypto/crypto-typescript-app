@@ -22,7 +22,12 @@
 }
 
 .content h1 {
+  position: relative;
   text-align: start;
+}
+
+.content p {
+  position: relative;
 }
 
 @media (max-width: 1300px) {
@@ -164,5 +169,54 @@
 
 a {
   text-decoration: none;
+  color: var(--green);
+}
+.btn {
+  padding: 0.6em 1.2em;
+  font-family: "Poppins";
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  color: white;
+  font-size: 1rem;
+  background-color: var(--green);
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+}
+
+.btn:hover {
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  padding: 0.8em 1.2em;
+  width: 200px;
+  font-family: "Poppins";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 40rem;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  background: var(--green);
+  cursor: pointer;
+  transition: all 200ms ease-in;
+}
+
+.button:hover {
+  background: var(--bluish);
   color: var(--green);
 }
