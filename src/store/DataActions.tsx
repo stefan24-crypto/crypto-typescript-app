@@ -57,7 +57,7 @@ export const fetchTopCoins = () => {
       }
 
       const data = await response.json();
-      return data?.data?.coins;
+      return data?.data?.coins.slice(0, 21);
     };
     try {
       const coinData = await fetchTheData();

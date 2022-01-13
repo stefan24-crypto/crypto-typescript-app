@@ -17,8 +17,6 @@ const PageNotFound = React.lazy(() => import("./Pages/PageNotFound"));
 
 const App: React.FC = () => {
   const dispatch = useAppDispatch();
-  const coins = useAppSelector((state) => state.data.topCoins);
-  console.log(coins);
   useEffect(() => {
     dispatch(fetchTopCoins());
     dispatch(fetchHomeData());
