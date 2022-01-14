@@ -4,6 +4,7 @@ import authentication from "../../assets/authentication.png";
 import backend from "../../assets/backend.png";
 import web3 from "../../assets/web_3.png";
 import Aos from "aos";
+import Button2 from "../UI/Button2";
 
 const Web3 = () => {
   Aos.init({ duration: 1000 });
@@ -102,6 +103,18 @@ const Web3 = () => {
           </p>
         </div>
       </div>
+      <footer>
+        <Button2
+          onClick={() =>
+            window.open(
+              "https://www.coindesk.com/learn/what-is-web-3-and-why-is-everyone-talking-about-it/",
+              "_blank"
+            )
+          }
+        >
+          Learn More
+        </Button2>
+      </footer>
     </section>
   );
 };

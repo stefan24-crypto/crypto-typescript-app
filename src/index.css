@@ -76,19 +76,15 @@ a:hover:after {
 
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
   background-color: var(--bluish);
-  /* background: transparent; */
 }
 
 ::-webkit-scrollbar {
   width: 18px;
-  /* background: transparent; */
   background-color: var(--bluish);
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 10px;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: var(--green);
 }
@@ -99,4 +95,11 @@ a:hover:after {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+footer {
+  padding: 0.5rem;
+  padding-top: 4rem;
+  display: flex;
+  justify-content: flex-end;
 }

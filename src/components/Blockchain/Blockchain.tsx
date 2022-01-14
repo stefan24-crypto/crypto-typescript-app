@@ -5,6 +5,7 @@ import mining from "../../assets/mining.png";
 import node from "../../assets/nodes.png";
 import cryptography from "../../assets/cryptography.png";
 import blockchain from "../../assets/blockchain-header.png";
+import Button2 from "../UI/Button2";
 
 const Blockchain: React.FC = () => {
   return (
@@ -91,6 +92,18 @@ const Blockchain: React.FC = () => {
           </div>
         </div>
       </main>
+      <footer>
+        <Button2
+          onClick={() =>
+            window.open(
+              "https://www.investopedia.com/terms/b/blockchain.asp",
+              " _blank"
+            )
+          }
+        >
+          Learn More
+        </Button2>
+      </footer>
     </section>
   );
 };

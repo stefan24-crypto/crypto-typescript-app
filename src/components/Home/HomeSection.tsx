@@ -18,6 +18,8 @@ import "aos/dist/aos.css";
 import FAQ from "./FAQ";
 import { TimelineMax } from "gsap";
 import { gsap } from "gsap";
+import Button2 from "../UI/Button2";
+import About from "./About";
 
 const HomeSection: React.FC = () => {
   gsap.registerPlugin(TimelineMax);
@@ -146,10 +148,10 @@ const HomeSection: React.FC = () => {
           </div>
         </div>
         <FAQ />
+        <About />
       </main>
       <footer className={classes.footer}>
-        <button
-          className={classes.button}
+        <Button2
           onClick={() =>
             window.scrollTo({
               top: 0,
@@ -158,7 +160,7 @@ const HomeSection: React.FC = () => {
           }
         >
           Back To Top
-        </button>
+        </Button2>
       </footer>
     </section>
   );

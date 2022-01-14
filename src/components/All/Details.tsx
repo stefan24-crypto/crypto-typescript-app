@@ -47,6 +47,23 @@ const Details: React.FC<DetailsProps> = ({ id }) => {
     <section className={classes.section}>
       <header className={classes.header}>
         <h1>{thisCoin?.name}</h1>
+        <div className={classes.prices}>
+          <NumberFormat
+            value={Number(thisCoin?.price).toFixed(2)}
+            prefix="$"
+            displayType="text"
+            className={classes.price}
+            thousandSeparator
+          />
+          <span
+            className={classes.change}
+            style={{
+              color: thisCoin?.change < 0 ? "red" : "white",
+            }}
+          >
+            {thisCoin?.change}%
+          </span>
+        </div>
       </header>
       <div className={classes.chart}>
         <Line

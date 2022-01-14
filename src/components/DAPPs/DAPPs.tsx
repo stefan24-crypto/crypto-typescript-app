@@ -9,6 +9,7 @@ import dapp5 from "../../assets/dapp5.png";
 import dapp6 from "../../assets/dapp6.png";
 import dapp7 from "../../assets/dapp7.png";
 import dapp8 from "../../assets/dapp8.png";
+import Button2 from "../UI/Button2";
 
 const DAPPs: React.FC = () => {
   const leftDiv = useRef<HTMLDivElement>(null);
@@ -66,6 +67,18 @@ const DAPPs: React.FC = () => {
           </div>
         </div>
       </main>
+      <footer>
+        <Button2
+          onClick={() =>
+            window.open(
+              "https://www.youtube.com/watch?v=nHhAEkG1y2U&t=436s",
+              "_blank"
+            )
+          }
+        >
+          Learn More
+        </Button2>
+      </footer>
     </section>
   );
 };

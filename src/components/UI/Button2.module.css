@@ -1,0 +1,23 @@
+.btn2 {
+  padding: 0.8em 1.2em;
+  width: 200px;
+  font-family: "Poppins";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 40rem;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  background: var(--green);
+  cursor: pointer;
+  transition: all 200ms ease-in;
+}
+
+.btn2:hover {
+  background: var(--bluish);
+  color: var(--green);
+}

@@ -7,6 +7,7 @@ import nft from "../../assets/nfticon.png";
 import assets from "../../assets/assets.png";
 import diamond from "../../assets/diamond.png";
 import Aos from "aos";
+import Button2 from "../UI/Button2";
 
 const NFTs: React.FC = () => {
   Aos.init({ duration: 1000 });
@@ -101,6 +102,18 @@ const NFTs: React.FC = () => {
           expensive NFTs.
         </p>
       </div>
+      <footer>
+        <Button2
+          onClick={() =>
+            window.open(
+              "https://www.theverge.com/22310188/nft-explainer-what-is-blockchain-crypto-art-faq",
+              "_blank"
+            )
+          }
+        >
+          Learn More
+        </Button2>
+      </footer>
     </section>
   );
 };
